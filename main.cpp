@@ -1,3 +1,8 @@
+#ifdef _WIN32
+#define NOMINMAX
+#include <windows.h>
+#endif
+
 #include "game.h"
 #include <cstdlib>
 #include <ctime>
@@ -8,6 +13,11 @@
 using namespace std;
 
 int main() {
+#ifdef _WIN32
+    SetConsoleOutputCP(1250);
+    SetConsoleCP(1250);
+#endif
+
     srand(static_cast<unsigned int>(time(nullptr)));
 
     cout << "=========================================\n";
