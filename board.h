@@ -15,5 +15,5 @@ class Board {
         bool isFull() const;
         char checkWinner() const;
 
-        friend ostream& operator<<(ostream& os, const Board* board);
+        friend ostream& operator<<(ostream& os, const Board& board);
 };

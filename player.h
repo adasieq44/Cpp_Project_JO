@@ -1,4 +1,5 @@
 #pragma once
+#include "board.h"
 #include <string>
 
 using namespace std;
@@ -17,11 +18,13 @@ class Player {
 };
 
 class playerHuman : public Player {
-    playerHuman(char sym, string n);
-    void makeMove(Board& board, int& row, int& col) override;
+    public:
+        playerHuman(char sym, string n);
+        void makeMove(Board& board, int& row, int& col) override;
 };
 
 class playerAI : public Player {
-    playerAI(char sym, string n);
-    void makeMove(Board& board, int& row, int& col) override;
+    public:
+        playerAI(char sym, string n);
+        void makeMove(Board& board, int& row, int& col) override;
 };
